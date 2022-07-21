@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 350px;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container header {
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.container header p:first-child {
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 0;
+  color: #888;
+  text-align: center;
+}
+
+.container header h1 {
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+}
+
+.container header p:last-child {
+  font-size: 15px;
+  color: #888;
+  text-align: center;
+}
+
+.container .boxs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+}
+
+.container .boxs div {
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 30px rgb(122, 121, 121);
+}
+
+.container .boxs h3 {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.container .boxs div p {
+  line-height: 1.5;
+  font-weight: 200;
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #888;
+  margin-bottom: 40px;
+}
+
+.container .boxs div img {
+  margin-bottom: 10px;
+  padding-left: 250px;
+}
+
+.container .boxs .sup {
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.container .boxs .team {
+  border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+.container .boxs .karma {
+  border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.container .boxs .calc {
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 1000px;
+    flex-direction: column;
+  }
+
+  .container header {
+    width: 40%;
+    margin: auto;
+  }
+
+  .container .boxs {
+    width: 100%;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    grid-template-rows: repeat(4, 1fr);
+    /* justify-content: center;
+        align-items: center; */
+    grid-template-areas: ". kar ." "sup kar team" "sup calc team" ". calc .";
+  }
+
+  .container .boxs div {
+    margin: 0;
+    max-width: 330px;
+  }
+  
+.container .boxs div img {
+  margin-bottom: 10px;
+  padding-left: 210px;
+}
+
+  .container .boxs .calc {
+    grid-area: 2/2;
+  }
+
+  .container .boxs .sup {
+    grid-area: sup;
+  }
+  .container .boxs .team {
+    grid-area: team;
+  }
+  .container .boxs .karma {
+    grid-area: kar;
+  }
+  .container .boxs .calc {
+    grid-area: calc;
+  }
+}
